@@ -46,3 +46,26 @@ sort_data = sorted(list_data,key=lambda k: k['temp_max'])
 for d in sort_data[::-1][:1]:
     # print(type(d))
     print('日期：',d['dt_txt'], '最高溫度：',d['temp_max'])
+
+
+
+
+
+# import requests
+# q = 'Taipei,tw'
+# token = 'XXXXXXXXXXXXXXXXXXXXXXXX'
+# url = f"https://api.openweathermap.org/data/2.5/forecast?q={q}&appid={token}&units=metric"
+# r = requests.get(url)
+# response = r.text
+#
+# import json
+# data = json.loads(response)
+#
+# tmp = 0
+# d = None
+# for row in data['list']:
+#     if row['main']['temp'] > tmp:
+#         tmp = row['main']['temp']
+#         d = row
+#
+# print(d['dt_txt'], (d['main']['temp']))
