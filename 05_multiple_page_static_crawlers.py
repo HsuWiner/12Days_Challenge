@@ -2,7 +2,7 @@
 
 import urllib.request as req , bs4
 
-def get_html(input):
+def Get_Html(input):
     request = req.Request(input,headers={
         "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.16; rv:84.0) Gecko/20100101 Firefox/84.0"
     })
@@ -30,14 +30,9 @@ def Prt_Movie():
     pass
 
 url = 'https://movies.yahoo.com.tw/movie_intheaters.html'
-# root = get_html(url)
-# Prt_Movie()
-# link_tag = root.find('li',class_="nexttxt")
-# url = link_tag.find("a").get("href")
-
 
 while type(url) == str:
-    root = get_html(url)
+    root = Get_Html(url)
     Prt_Movie()
 
     link_tag = root.find('li',class_="nexttxt")
